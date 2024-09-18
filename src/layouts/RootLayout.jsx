@@ -6,8 +6,8 @@ export default function RootLayout() {
       <header>
         <h1>Navbrand</h1>
         <nav>
-          <NavLink path="/">Add Book</NavLink>
-          <NavLink path="all-books">All Books</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="all-books">View Books</NavLink>
         </nav>
       </header>
       <main>
