@@ -25,7 +25,8 @@ export default function Form() {
           "Content-Type": "application/json",
         },
       });
-      console.log(await apiResponse.json());
+      const responseObject = await apiResponse.json();
+      console.log(responseObject.message);
 
       // reset inputs
       setBookName("");
