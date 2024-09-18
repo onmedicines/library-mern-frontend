@@ -1,0 +1,130 @@
+:root {
+  --primary: rgb(0, 110, 255);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100vw;
+
+  background-color: rgb(36, 36, 36);
+}
+.root-layout {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER and NAVIGATION */
+header {
+  padding: clamp(1rem, 2vw, 3rem);
+  /* padding: calc(0.25rem + 1.5vw) calc(1rem + 1.5vw); */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: clamp(1rem, 2vw, 2rem);
+  color: var(--primary);
+}
+header nav {
+  display: flex;
+  gap: 1rem;
+  /* gap: calc(0.5rem + 1.5vw); */
+}
+header nav a {
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  text-decoration: none;
+  padding: calc(0.1rem + 0.5vw) calc(0.25rem + 1vw);
+  border-radius: 6px;
+}
+header nav a.active {
+  background-color: var(--primary);
+}
+
+main {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+/* HOME PAGE */
+.form-container {
+  height: 100%;
+  width: 100%;
+
+  padding-top: calc(5rem - 2vw);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.form-container h1 {
+  font-size: clamp(2.5rem, 4vw, 5rem);
+  text-align: center;
+}
+.form-container form {
+  width: clamp(300px, 30%, 100%);
+  margin-top: calc(7rem - 2vw);
+
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 2rem);
+}
+.form-container form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.form-container form label span {
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  color: rgb(201, 194, 194);
+}
+.form-container form label input {
+  color: black;
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}
+.form-container form button {
+  align-self: center;
+  color: black;
+  padding: 0.5rem 1rem;
+  font-size: clamp(1rem, 2vw, 1.75rem);
+  border-radius: 6px;
+}
+
+/* ALL BOOKS */
+.all-books-container {
+  padding: 2rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+.all-books-container .book-container {
+  height: fit-content;
+  padding: 1rem 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.all-books-container .book-container img {
+  height: 350px;
+  object-fit: contain;
+}
+.all-books-container .book-container h1 {
+  font-size: clamp(1.25rem, 2vw, 2rem);
+}

@@ -3,7 +3,7 @@ export default function Book({ bookName, author, imgurl }) {
     <div className="book-container">
       <img src={imgurl} alt="book" />
       <h1>{bookName}</h1>
-      <p>{author}</p>
+      <p>by {author}</p>
     </div>
   );
 }
