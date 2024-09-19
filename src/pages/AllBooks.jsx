@@ -15,6 +15,6 @@ export default function AllBooks() {
 
 // loader
 export const booksLoader = async () => {
-  const apiResponse = await fetch("http://localhost:3000/all-books");
+  const apiResponse = await fetch("https://library-mern-backend.onrender.com/all-books");
   return await apiResponse.json();
 };
