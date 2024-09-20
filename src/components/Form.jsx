@@ -40,7 +40,7 @@ export default function Form() {
   return (
     <div className="form-container">
       <h1>Add New Book to Database</h1>
-      <form onSubmit={handleSubmit} autoComplete="off">
+      <form autoComplete="off">
         <label htmlFor="bookName">
           <span>Book:</span>
           <input type="text" name="bookName" id="bookName" placeholder="eg. Harry Potter" value={bookName} onChange={handleChange} />
@@ -53,7 +53,9 @@ export default function Form() {
           <span>Pages:</span>
           <input type="number" name="pages" id="pages" value={pages} onChange={handleChange} />
         </label>
-        <button type="submit">Add Book</button>
+        <button type="submit" onClick={handleSubmit}>
+          Add Book
+        </button>
       </form>
     </div>
   );
