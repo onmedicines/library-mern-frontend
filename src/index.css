@@ -98,7 +98,8 @@ main {
 }
 .form-container form button {
   align-self: center;
-  color: black;
+  color: white;
+  background-color: rgb(52, 117, 52);
   padding: 0.5rem 1rem;
   font-size: clamp(1rem, 2vw, 1.75rem);
   border-radius: 6px;
