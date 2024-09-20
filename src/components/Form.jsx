@@ -18,7 +18,7 @@ export default function Form() {
     const data = { bookName, author, pages };
 
     try {
-      const apiResponse = await fetch("http://localhost:3000", {
+      const apiResponse = await fetch("https://library-mern-backend.onrender.com/", {
         method: "post",
         body: JSON.stringify(data),
         headers: {
